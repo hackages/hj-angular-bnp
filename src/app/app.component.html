@@ -9,7 +9,7 @@
     <div class="tab-filter">
       <div class="filters">
         <ul class="filters-list">
-          <li ngFor="let category in categories" click="selectTab(category.category)">
+          <li ngFor="let category in categories" click="selectTab category.category">
             <a class.selected="category.selected">{{category.category}}</a>
           </li>
         </ul>
@@ -27,7 +27,7 @@
     <!-- MovieList Component -->
     <div ngFor="let movie of filteredMovies" class="movie"
          mouseenter="toggleHoverForTheMovie(movie.id)"
-         (mouseleave)="toggleHoverForTheMovie(movie.id)">
+         (mouseleave)="toggleHoverForTheMovie movie.id">
       <!-- Movie Component -->
       <img
         [alt]="movie.title + 'cover' "
@@ -54,7 +54,7 @@
     <!-- MovieList Component -->
   </section>
   <!-- Sidebar Component -->
-  <div [class.filter-is-visible]="!navClosed" class="filter">
+  <div [class filter-is-visible]="!navClosed" class="filter">
     <form novalidate>
       <div class="filter-block">
         <h4>Search</h4>

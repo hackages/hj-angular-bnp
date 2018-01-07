@@ -7,8 +7,8 @@ import {genres} from './mocks/genres';
 
 @Component({
   selector: 'hf-app',
-  templateUrl: './app.component.html',
-  styleUrls: [
+  template: './app.component.html',
+  styles: [
     '../assets/css/header.css',
     '../assets/css/movie.css',
     '../assets/css/movieComments.css',
