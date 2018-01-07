@@ -58,28 +58,31 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   - Template syntax 
 
 #### TODO :
-
- - Split in several components using the CLI. Make sure your application is still working
-    - MovieList => movie-list
-      - Movie => movie
-        - MovieHoverInfo => movie-hover-info
-    - Menubar => menubar
-    - Sidebar => sidebar
-    - Header => header
+  - Fix all errors first
   - Implement pipe using the CLI that will truncate movie's overview 
     - The pipe's name is 'Shorten' => hint: shorten method
+  
+  - Split in several components using the CLI. Make sure your application is still working
+        - MovieList => movie-list
+          - Movie => movie
+            - MovieHoverInfo => movie-hover-info
+        - Menubar => menubar
+        - Sidebar => sidebar
+        - Header => header 
+        
   - Create API service using the CLI with mock data
       - getMovies return only 50 'movies' from the mocks
       - getCategories return 'categories' mocks
       - getGenres return 'genres' mocks
+      
   - Introduction to lifecycle hooks
     - ngOnInit
       - Use API service in the component to get your data instead of the
       global mock data
     - ngOnChanges
-      - Build a light mapper from Movie to MovieLite (utils.ts)
+      - Build a light mapper from Movie to MovieLite (utils.ts) in Movie component
     - ngOnDestroy (demo)
-    
+  
 #### Testing (demo)
   - Component category
   - Service

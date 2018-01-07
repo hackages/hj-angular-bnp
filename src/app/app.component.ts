@@ -1,18 +1,18 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import {Category, Genre, Movie} from '../shared/types';
-import {PICTURES_CDN_URL} from '../shared/constant';
-import {movies} from '../shared/mocks/movies';
-import {categories} from '../shared/mocks/categories';
-import {genres} from '../shared/mocks/genres';
+import {Category, Genre, Movie} from './types';
+import {PICTURES_CDN_URL} from './constant';
+import {movies} from './mocks/movies';
+import {categories} from './mocks/categories';
+import {genres} from './mocks/genres';
 
 @Component({
   selector: 'hf-app',
   templateUrl: './app.component.html',
   styleUrls: [
-    '../../assets/css/header.css',
-    '../../assets/css/movie.css',
-    '../../assets/css/movieComments.css',
-    '../../assets/css/movieCommentForm.css',
+    '../assets/css/header.css',
+    '../assets/css/movie.css',
+    '../assets/css/movieComments.css',
+    '../assets/css/movieCommentForm.css',
   ],
   encapsulation: ViewEncapsulation.None
 })
@@ -37,11 +37,11 @@ export class AppComponent {
       return filter;
     });
     this.filterMovies();
-  };
+  }
 
   closeSideBar(): void {
     this.navClosed = true;
-  };
+  }
 
   openSideBar(): void {
     this.navClosed = false;
@@ -64,18 +64,18 @@ export class AppComponent {
   filterByCategory(selectedCategory: string) {
     return (movie: Movie) => {
       return selectedCategory === 'All' || this.movieContainsGenre(movie, this.getGenreId(selectedCategory));
-    }
+    };
   }
 
   filterByTitle(title: string) {
     return (movie: Movie) => {
       return !title || movie.title.toLowerCase().includes(title.toLowerCase());
-    }
+    };
   }
 
   movieContainsGenre(movie: Movie, genre_id: number): boolean {
     return movie.genre_ids.reduce((contains, next) => {
-      return contains ? contains : next === genre_id
+      return contains ? contains : next === genre_id;
     }, false);
   }
 

@@ -3,6 +3,16 @@ import {genres} from './mocks/genres';
 import {movies} from './mocks/movies';
 import {Movie} from './types';
 
+/**
+ * TODO : Implement mapMovieToMovieLite
+ */
+
+
+/**
+ * Helper functions
+ *
+ */
+
 export const getGenreName = (id: number) =>
   genres.filter(genre => genre.id === id).map(({ name }) => name).join('');
 
