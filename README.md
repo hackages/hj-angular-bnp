@@ -1,4 +1,4 @@
-# Hackcamp.Angular  with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
+# Hackcamp.Angular  with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
 ## Development server
 
